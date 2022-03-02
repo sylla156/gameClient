@@ -1,0 +1,27 @@
+{
+  "name": "gameclient",
+  "version": "1.0.0",
+  "description": "creation d'un site web pour un client",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js",
+    "style": "sass public/style/scss/style.scss public/style/css/style.css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sylla156/gameClient.git"
+  },
+  "author": "sylla ibrahim",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sylla156/gameClient/issues"
+  },
+  "homepage": "https://github.com/sylla156/gameClient#readme",
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.3",
+    "nodemon": "^2.0.15",
+    "sass": "^1.49.9"
+  }
+}
