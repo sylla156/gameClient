@@ -1,4 +1,4 @@
-@use './pallette' as *;
+@use "./pallette" as *;
 
 * {
   margin: 0;
@@ -11,23 +11,45 @@ body {
   padding: 0;
   margin: 0;
 }
+body::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	border-radius: 10px;
+	background-color: #F5F5F5;
+}
+
+body::-webkit-scrollbar
+{
+	width: 8px;
+  height: 10px;
+	background-color: #F5F5F5;
+}
+
+body::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	background-color: $app;
+  
+}
 
 .app {
-  height: 100vh;
-  width: 100vw;
+  height: 200vh;
+  width: 100%;
   overflow: hidden;
-  background-image: $homeBackgroundImage;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-origin: border-box;
-  
+ 
+
   font-family: Roboto;
 
-
   &__home {
-    height: 100%;
+    background-image: $homeBackgroundImage;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-origin: border-box;
+    height: 50%;
     width: 100%;
+    padding-top:10%;
     &--header {
       width: 100%;
       height: 8%;
@@ -35,6 +57,9 @@ body {
       display: flex;
       justify-content: space-between;
       align-items: center;
+      position: fixed;
+      top: 0;
+
       .title {
         width: 25%;
         display: flex;
@@ -46,7 +71,7 @@ body {
       }
 
       .nav {
-          padding-right:5%;
+        padding-right: 5%;
         width: 55%;
         display: flex;
         justify-content: space-around;
@@ -59,74 +84,76 @@ body {
         text-transform: uppercase;
 
         p:nth-child(4) {
-            background-color: $app;
-            border-radius: 26px;
-            padding: 5px 10px;
+          background-color: $app;
+          border-radius: 26px;
+          padding: 5px 10px;
         }
 
         P:last-child {
-            background-color: $homeColor;
-            color: $homeBackgroundColor;
-            border-radius: 26px;
-            padding: 5px 10px;
-
+          background-color: $homeColor;
+          color: $homeBackgroundColor;
+          border-radius: 26px;
+          padding: 5px 10px;
         }
       }
-
     }
 
     &--content {
-        height: 92%;
+      height: 90%;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      .title {
+        color: $homeColor;
+        text-transform: capitalize;
+        font-weight: bolder;
+      }
+
+      .form {
         width: 100%;
+        height: 10%;
         display: flex;
-        flex-direction: column;
         justify-content: center;
-        align-items: center;
+        align-items: flex-start;
 
-        .title {
-            color: $homeColor;
-            text-transform: capitalize;
-            font-weight: bolder;
-        }
-
-        .form {
-            width: 100%;
-            height: 10%;
-            display: flex;
-            justify-content: center;
-            align-items: flex-start;
-
-            div {
-                background-color: $homeColor;
-                width: 65%;
-                height: 50%;
-                border-radius: 26px;
-                padding: 0 0 0 10px;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                button{
-                    border: none;
-                    background-color: $homeColor;
-                    border: none;
-                    outline: none;
-                    width: 5%;
-                    img {
-                        width: 50%;
-                        height: auto;
-                    }
-                }
-                input {
-                    width: 95%;
-                    height: 100%;
-                    border: none;
-                    outline: none;
-                    border-radius: 26px;
-                    background-color: $homeColor;
-                    padding: 0 0 0 10px;
-                }
+        div {
+          background-color: $homeColor;
+          width: 65%;
+          height: 50%;
+          border-radius: 26px;
+          padding: 0 0 0 10px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          button {
+            border: none;
+            background-color: $homeColor;
+            border: none;
+            outline: none;
+            width: 5%;
+            img {
+              width: 50%;
+              height: auto;
             }
+          }
+          input {
+            width: 95%;
+            height: 100%;
+            border: none;
+            outline: none;
+            border-radius: 26px;
+            background-color: $homeColor;
+            padding: 0 0 0 10px;
+          }
         }
+      }
     }
+  }
+
+  &__slide {
+    height: 50%;
   }
 }
