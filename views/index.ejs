@@ -1,7 +1,31 @@
 <%- include('./pages/header.ejs') %>
 
 
-
+<div class="app">
+    <div class="app__home">
+        <div class="app__home--header">
+            <div class="title">
+                <img src="img/logo.png" alt="" srcset="">
+            </div>
+            <div class="nav">
+                <p>PLAYERS</p>
+                <p>TEAMS</p>
+                <p>FORUMS</p>
+                <p>REGISTER</p>
+                <p>LOGIN</p>
+            </div>
+        </div>
+        <div class="app__home--content">
+            <h1 class="title">Ready to find your gamer Partner?</h1>
+            <form action="/search" method="get" class="form">
+                <div>
+                    <button type="submit"><img src="img/search.png" alt="" srcset=""></button>
+                    <input type="text" name="search" id="search" placeholder="try searching : pingpong">
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
 
 
 <%- include('./pages/footer.ejs') %> 

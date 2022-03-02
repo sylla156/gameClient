@@ -1,0 +1,130 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+.app {
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  background-image: url(../../img/home.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-origin: border-box;
+  
+  font-family: Roboto;
+
+
+  &__home {
+    height: 100%;
+    width: 100%;
+    &--header {
+      width: 100%;
+      height: 8%;
+      background-color: #00000083;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .title {
+        width: 25%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img {
+          width: 140px;
+        }
+      }
+
+      .nav {
+          padding-right:5%;
+        width: 55%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        color: white;
+
+        font-style: normal;
+        font-weight: bold;
+        text-align: center;
+        text-transform: uppercase;
+
+        p:nth-child(4) {
+            background-color: red;
+            border-radius: 26px;
+            padding: 5px 10px;
+        }
+
+        P:last-child {
+            background-color: white;
+            color: black;
+            border-radius: 26px;
+            padding: 5px 10px;
+
+        }
+      }
+
+    }
+
+    &--content {
+        height: 92%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .title {
+            color: white;
+            text-transform: capitalize;
+            font-weight: bolder;
+        }
+
+        .form {
+            width: 100%;
+            height: 10%;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+
+            div {
+                background-color: white;
+                width: 65%;
+                height: 50%;
+                border-radius: 26px;
+                padding: 0 0 0 10px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                button{
+                    border: none;
+                    background-color: white;
+                    border: none;
+                    outline: none;
+                    width: 5%;
+                    img {
+                        width: 50%;
+                        height: auto;
+                    }
+                }
+                input {
+                    width: 95%;
+                    height: 100%;
+                    border: none;
+                    outline: none;
+                    border-radius: 26px;
+                    background-color: white;
+                    padding: 0 0 0 10px;
+                }
+            }
+        }
+    }
+  }
+}

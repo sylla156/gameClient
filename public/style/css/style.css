@@ -1,3 +1,119 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  box-sizing: border-box;
+}
 
+body {
+  padding: 0;
+  margin: 0;
+}
+
+.app {
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  background-image: url(../../img/home.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-origin: border-box;
+  font-family: Roboto;
+}
+.app__home {
+  height: 100%;
+  width: 100%;
+}
+.app__home--header {
+  width: 100%;
+  height: 8%;
+  background-color: #00000083;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.app__home--header .title {
+  width: 25%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.app__home--header .title img {
+  width: 140px;
+}
+.app__home--header .nav {
+  padding-right: 5%;
+  width: 55%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: white;
+  font-style: normal;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+}
+.app__home--header .nav p:nth-child(4) {
+  background-color: red;
+  border-radius: 26px;
+  padding: 5px 10px;
+}
+.app__home--header .nav P:last-child {
+  background-color: white;
+  color: black;
+  border-radius: 26px;
+  padding: 5px 10px;
+}
+.app__home--content {
+  height: 92%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.app__home--content .title {
+  color: white;
+  text-transform: capitalize;
+  font-weight: bolder;
+}
+.app__home--content .form {
+  width: 100%;
+  height: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+.app__home--content .form div {
+  background-color: white;
+  width: 65%;
+  height: 50%;
+  border-radius: 26px;
+  padding: 0 0 0 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.app__home--content .form div button {
+  border: none;
+  background-color: white;
+  border: none;
+  outline: none;
+  width: 5%;
+}
+.app__home--content .form div button img {
+  width: 50%;
+  height: auto;
+}
+.app__home--content .form div input {
+  width: 95%;
+  height: 100%;
+  border: none;
+  outline: none;
+  border-radius: 26px;
+  background-color: white;
+  padding: 0 0 0 10px;
+}
 
 /*# sourceMappingURL=style.css.map */
