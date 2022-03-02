@@ -48,7 +48,7 @@ body {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  color: white;
+  color: #ffff;
   font-style: normal;
   font-weight: bold;
   text-align: center;
@@ -60,8 +60,8 @@ body {
   padding: 5px 10px;
 }
 .app__home--header .nav P:last-child {
-  background-color: white;
-  color: black;
+  background-color: #ffff;
+  color: #000;
   border-radius: 26px;
   padding: 5px 10px;
 }
@@ -74,7 +74,7 @@ body {
   align-items: center;
 }
 .app__home--content .title {
-  color: white;
+  color: #ffff;
   text-transform: capitalize;
   font-weight: bolder;
 }
@@ -86,7 +86,7 @@ body {
   align-items: flex-start;
 }
 .app__home--content .form div {
-  background-color: white;
+  background-color: #ffff;
   width: 65%;
   height: 50%;
   border-radius: 26px;
@@ -97,7 +97,7 @@ body {
 }
 .app__home--content .form div button {
   border: none;
-  background-color: white;
+  background-color: #ffff;
   border: none;
   outline: none;
   width: 5%;
@@ -112,7 +112,7 @@ body {
   border: none;
   outline: none;
   border-radius: 26px;
-  background-color: white;
+  background-color: #ffff;
   padding: 0 0 0 10px;
 }
 
