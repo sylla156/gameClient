@@ -30,10 +30,9 @@ body::-webkit-scrollbar-thumb {
 }
 
 .app {
-  height: 200vh;
+  height: auto;
   width: 100%;
   overflow: hidden;
-
   background-image: $homeBackgroundImage;
   background-size: cover;
   background-position: center;
@@ -42,58 +41,63 @@ body::-webkit-scrollbar-thumb {
   background-attachment: fixed;
   font-family: Roboto;
 
-  &__home {
-    height: 50%;
+
+  &__header {
     width: 100%;
-    padding-top: 10%;
-    &--header {
-      width: 100%;
-      height: 8%;
-      background-color: $homeHeaderBackgroundColor;
+    height: 8vh;
+    background-color: $homeHeaderBackgroundColor;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+
+    .title {
+      width: 25%;
       display: flex;
-      justify-content: space-between;
+      justify-content: center;
       align-items: center;
-      position: fixed;
-      top: 0;
-
-      .title {
-        width: 25%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        img {
-          width: 140px;
-        }
-      }
-
-      .nav {
-        padding-right: 5%;
-        width: 55%;
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        color: $homeColor;
-
-        font-style: normal;
-        font-weight: bold;
-        text-align: center;
-        text-transform: uppercase;
-
-        p:nth-child(4) {
-          background-color: $app;
-          border-radius: 26px;
-          padding: 5px 15px;
-        }
-
-        P:last-child {
-          background-color: $homeColor;
-          color: $homeBackgroundColor;
-          border-radius: 26px;
-          padding: 5px 15px;
-        }
+      img {
+        width: 140px;
       }
     }
 
+    .nav {
+      padding-right: 5%;
+      width: 55%;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      color: $homeColor;
+
+      font-style: normal;
+      font-weight: bold;
+      text-align: center;
+      text-transform: uppercase;
+
+      p:nth-child(4) {
+        background-color: $app;
+        border-radius: 26px;
+        padding: 5px 15px;
+
+        a{
+          color: inherit;
+          text-decoration: none;
+        }
+      }
+
+      P:last-child {
+        background-color: $homeColor;
+        color: $homeBackgroundColor;
+        border-radius: 26px;
+        padding: 5px 15px;
+      }
+    }
+  }
+  &__home {
+    height: 100vh;
+    width: 100%;
+    padding-top: 10%;
     &--content {
       height: 90%;
       width: 100%;
@@ -153,7 +157,7 @@ body::-webkit-scrollbar-thumb {
   }
 
   &__slide {
-    height: 50%;
+    height: 100vh;
     width: 100%;
 
     &--title {
@@ -277,6 +281,77 @@ body::-webkit-scrollbar-thumb {
       background-color: red;
       text-align: center;
       color: $homeColor;
+    }
+  }
+
+  &__register {
+    height: 100vh;
+    background-color: #fff;
+    &--header {
+      height: 35%;
+      background-image: url(../../img/register.png);
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      
+
+      .title{
+        margin-top: 8%;
+        text-transform: capitalize;
+        font-weight: bolder;
+      }
+    }
+
+    &--content {
+      height: 75%;
+      
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .form {
+        height: 80%;
+        width: 90%;
+
+        form {
+          position: relative;
+          div{
+            margin: 2%;
+            label {
+              text-transform: capitalize;
+              font-weight: bolder;
+              font-size: 1.3em;
+              display: inline-block;
+              width: 25%;
+            }
+
+            input {
+              border: none;
+              height: 1.6em;
+              display: inline-block;
+              width: 20%;
+              background-color: #C4C4C4;
+
+            }
+
+            
+          }
+          button {
+            position: absolute;
+            right: 0;
+            background-color: $app;
+            border-radius: 26px;
+            padding: 5px 15px;
+            border: none;
+            color: $homeColor;
+            text-transform: capitalize;
+            font-weight: bolder;
+
+          }
+        }
+      }
     }
   }
 }

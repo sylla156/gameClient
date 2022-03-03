@@ -8,7 +8,11 @@ app.set('view engine', 'ejs');
 app.use(express.static(__dirname + '/public'));
 
 app.get('/', (request, response) => {
-  response.render('index');
+  response.render('index', {page: 'home'});
+})
+
+app.get('/register', (request, response) => {
+  response.render('index', {page: 'register'})
 })
 
 app.listen(port, () => {

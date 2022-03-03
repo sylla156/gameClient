@@ -29,7 +29,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .app {
-  height: 200vh;
+  height: auto;
   width: 100%;
   overflow: hidden;
   background-image: url(../../img/home.png);
@@ -40,14 +40,9 @@ body::-webkit-scrollbar-thumb {
   background-attachment: fixed;
   font-family: Roboto;
 }
-.app__home {
-  height: 50%;
+.app__header {
   width: 100%;
-  padding-top: 10%;
-}
-.app__home--header {
-  width: 100%;
-  height: 8%;
+  height: 8vh;
   background-color: #00000083;
   display: flex;
   justify-content: space-between;
@@ -55,16 +50,16 @@ body::-webkit-scrollbar-thumb {
   position: fixed;
   top: 0;
 }
-.app__home--header .title {
+.app__header .title {
   width: 25%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.app__home--header .title img {
+.app__header .title img {
   width: 140px;
 }
-.app__home--header .nav {
+.app__header .nav {
   padding-right: 5%;
   width: 55%;
   display: flex;
@@ -76,16 +71,25 @@ body::-webkit-scrollbar-thumb {
   text-align: center;
   text-transform: uppercase;
 }
-.app__home--header .nav p:nth-child(4) {
+.app__header .nav p:nth-child(4) {
   background-color: red;
   border-radius: 26px;
   padding: 5px 15px;
 }
-.app__home--header .nav P:last-child {
+.app__header .nav p:nth-child(4) a {
+  color: inherit;
+  text-decoration: none;
+}
+.app__header .nav P:last-child {
   background-color: #ffff;
   color: #000;
   border-radius: 26px;
   padding: 5px 15px;
+}
+.app__home {
+  height: 100vh;
+  width: 100%;
+  padding-top: 10%;
 }
 .app__home--content {
   height: 90%;
@@ -141,7 +145,7 @@ body::-webkit-scrollbar-thumb {
   padding: 0 0 0 10px;
 }
 .app__slide {
-  height: 50%;
+  height: 100vh;
   width: 100%;
 }
 .app__slide--title {
@@ -256,6 +260,65 @@ body::-webkit-scrollbar-thumb {
   background-color: red;
   text-align: center;
   color: #ffff;
+}
+.app__register {
+  height: 100vh;
+  background-color: #fff;
+}
+.app__register--header {
+  height: 35%;
+  background-image: url(../../img/register.png);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.app__register--header .title {
+  margin-top: 8%;
+  text-transform: capitalize;
+  font-weight: bolder;
+}
+.app__register--content {
+  height: 75%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.app__register--content .form {
+  height: 80%;
+  width: 90%;
+}
+.app__register--content .form form {
+  position: relative;
+}
+.app__register--content .form form div {
+  margin: 2%;
+}
+.app__register--content .form form div label {
+  text-transform: capitalize;
+  font-weight: bolder;
+  font-size: 1.3em;
+  display: inline-block;
+  width: 25%;
+}
+.app__register--content .form form div input {
+  border: none;
+  height: 1.6em;
+  display: inline-block;
+  width: 20%;
+  background-color: #C4C4C4;
+}
+.app__register--content .form form button {
+  position: absolute;
+  right: 0;
+  background-color: red;
+  border-radius: 26px;
+  padding: 5px 15px;
+  border: none;
+  color: #ffff;
+  text-transform: capitalize;
+  font-weight: bolder;
 }
 
 /*# sourceMappingURL=style.css.map */
