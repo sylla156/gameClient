@@ -15,6 +15,11 @@ app.get('/register', (request, response) => {
   response.render('index', {page: 'register'})
 })
 
+
+app.get('/login', (request, response) => {
+  response.render('index', {page: 'login'})
+})
+
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
 })

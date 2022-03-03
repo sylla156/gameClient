@@ -41,7 +41,6 @@ body::-webkit-scrollbar-thumb {
   background-attachment: fixed;
   font-family: Roboto;
 
-
   &__header {
     width: 100%;
     height: 8vh;
@@ -80,7 +79,7 @@ body::-webkit-scrollbar-thumb {
         border-radius: 26px;
         padding: 5px 15px;
 
-        a{
+        a {
           color: inherit;
           text-decoration: none;
         }
@@ -91,6 +90,11 @@ body::-webkit-scrollbar-thumb {
         color: $homeBackgroundColor;
         border-radius: 26px;
         padding: 5px 15px;
+
+        a {
+          color: inherit;
+          text-decoration: none;
+        }
       }
     }
   }
@@ -193,7 +197,6 @@ body::-webkit-scrollbar-thumb {
           height: 50px;
           z-index: 100;
           margin: 10px;
-
         }
         .next {
           position: absolute;
@@ -225,51 +228,48 @@ body::-webkit-scrollbar-thumb {
             }
           }
 
-          &__one::after{
-            content: 'Discuss a topic with other players in whatever field in our custom forums.';
+          &__one::after {
+            content: "Discuss a topic with other players in whatever field in our custom forums.";
             position: absolute;
             top: 50%;
             left: 50%;
             color: $homeColor;
             font-size: 3em;
             font-weight: bolder;
-            text-transform:capitalize ;
-            transform: translate(-50%,-50%);
+            text-transform: capitalize;
+            transform: translate(-50%, -50%);
             width: 90%;
-            height:50%;
+            height: 50%;
             text-align: center;
           }
 
-
-          &__two::after{
-            content: 'You can create a team or join a team with a simple click thanks to the cards display system. ';
+          &__two::after {
+            content: "You can create a team or join a team with a simple click thanks to the cards display system. ";
             position: absolute;
             top: 50%;
             left: 50%;
             color: $homeColor;
             font-size: 3em;
             font-weight: bolder;
-            text-transform:capitalize ;
-            transform: translate(-50%,-50%);
+            text-transform: capitalize;
+            transform: translate(-50%, -50%);
             width: 90%;
-            height:50%;
+            height: 50%;
             text-align: center;
           }
 
-
-
-          &__three::after{
-            content: 'Find a player to play with in seconds in whatever game you like.';
+          &__three::after {
+            content: "Find a player to play with in seconds in whatever game you like.";
             position: absolute;
             top: 50%;
             left: 50%;
             color: $homeColor;
             font-size: 3em;
             font-weight: bolder;
-            text-transform:capitalize ;
-            transform: translate(-50%,-50%);
+            text-transform: capitalize;
+            transform: translate(-50%, -50%);
             width: 90%;
-            height:50%;
+            height: 50%;
             text-align: center;
           }
         }
@@ -295,9 +295,8 @@ body::-webkit-scrollbar-thumb {
       display: flex;
       justify-content: center;
       align-items: center;
-      
 
-      .title{
+      .title {
         margin-top: 8%;
         text-transform: capitalize;
         font-weight: bolder;
@@ -306,7 +305,7 @@ body::-webkit-scrollbar-thumb {
 
     &--content {
       height: 75%;
-      
+
       display: flex;
       justify-content: center;
       align-items: center;
@@ -317,7 +316,7 @@ body::-webkit-scrollbar-thumb {
 
         form {
           position: relative;
-          div{
+          div {
             margin: 2%;
             label {
               text-transform: capitalize;
@@ -332,11 +331,8 @@ body::-webkit-scrollbar-thumb {
               height: 1.6em;
               display: inline-block;
               width: 20%;
-              background-color: #C4C4C4;
-
+              background-color: #c4c4c4;
             }
-
-            
           }
           button {
             position: absolute;
@@ -348,7 +344,71 @@ body::-webkit-scrollbar-thumb {
             color: $homeColor;
             text-transform: capitalize;
             font-weight: bolder;
+          }
+        }
+      }
+    }
+  }
 
+  &__login {
+    height: 100vh;
+    background-color: #fff;
+    &--header {
+      height: 35%;
+      background-image: url(../../img/register.png);
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .title {
+        margin-top: 8%;
+        text-transform: capitalize;
+        font-weight: bolder;
+      }
+    }
+
+    &--content {
+      height: 75%;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .form {
+        height: 80%;
+        width: 90%;
+
+        form {
+          position: relative;
+          div {
+            margin: 2%;
+            label {
+              text-transform: capitalize;
+              font-weight: bolder;
+              font-size: 1.3em;
+              display: inline-block;
+              width: 15%;
+            }
+
+            input {
+              border: none;
+              height: 1.6em;
+              display: inline-block;
+              width: 20%;
+              background-color: #c4c4c4;
+            }
+
+            button {
+              background-color: $app;
+              border-radius: 26px;
+              padding: 5px 15px;
+              border: none;
+              color: $homeColor;
+              text-transform: capitalize;
+              font-weight: bolder;
+            }
           }
         }
       }
