@@ -62,8 +62,8 @@ body::-webkit-scrollbar-thumb {
     }
 
     .nav {
-      padding-right: 5%;
-      width: 55%;
+      // padding-right: 5%;
+      width: 65%;
       display: flex;
       justify-content: space-around;
       align-items: center;
@@ -73,12 +73,94 @@ body::-webkit-scrollbar-thumb {
       font-weight: bold;
       text-align: center;
       text-transform: uppercase;
+      & > p {
+        width: min-content;
+      }
 
+      &__connected {
+        width: 40%;
+        position: relative;
+        &:hover {
+          .card {
+            height: max-content;
+            pointer-events: initial;
+            opacity: 1;
+            p {
+              a {
+                opacity: 1;
+              }
+
+              &:last-child {
+                opacity: 1;
+              }
+            }
+          }
+        }
+        .title {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 100%;
+
+          .img1 {
+            width: 15%;
+          }
+
+          p {
+            width: 60%;
+            padding: 0;
+            font-size: 0.8em;
+            text-transform: capitalize;
+            font-weight: bolder;
+          }
+
+          .img2 {
+            width: 8%;
+          }
+        }
+
+        .card {
+          position: absolute;
+          background-color: white;
+          width: 60%;
+          left: 23%;
+          height: 0px;
+          pointer-events: none;
+          opacity: 0;
+          transition: all 0.4s;
+          p {
+            margin: 10px;
+            a {
+              font-size: 0.9em;
+              color: black;
+              text-decoration: none;
+              text-transform: capitalize;
+              font-weight: bolder;
+
+              &:hover {
+                text-decoration: underline;
+                transition: all 0.3s;
+              }
+            }
+
+            &:last-child {
+              background-color: $app;
+              border-radius: 26px;
+              width: 50%;
+              padding: 5px;
+              position: relative;
+              left: 20%;
+              color: #fff;
+              opacity: 0;
+            }
+          }
+        }
+      }
       p:nth-child(4) {
         background-color: $app;
         border-radius: 26px;
         padding: 5px 15px;
-
+        width: min-content;
         a {
           color: inherit;
           text-decoration: none;
@@ -86,6 +168,8 @@ body::-webkit-scrollbar-thumb {
       }
 
       P:last-child {
+        width: min-content;
+
         background-color: $homeColor;
         color: $homeBackgroundColor;
         border-radius: 26px;

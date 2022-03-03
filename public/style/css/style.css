@@ -60,8 +60,7 @@ body::-webkit-scrollbar-thumb {
   width: 140px;
 }
 .app__header .nav {
-  padding-right: 5%;
-  width: 55%;
+  width: 65%;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -71,16 +70,89 @@ body::-webkit-scrollbar-thumb {
   text-align: center;
   text-transform: uppercase;
 }
+.app__header .nav > p {
+  width: min-content;
+}
+.app__header .nav__connected {
+  width: 40%;
+  position: relative;
+}
+.app__header .nav__connected:hover .card {
+  height: max-content;
+  pointer-events: initial;
+  opacity: 1;
+}
+.app__header .nav__connected:hover .card p a {
+  opacity: 1;
+}
+.app__header .nav__connected:hover .card p:last-child {
+  opacity: 1;
+}
+.app__header .nav__connected .title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.app__header .nav__connected .title .img1 {
+  width: 15%;
+}
+.app__header .nav__connected .title p {
+  width: 60%;
+  padding: 0;
+  font-size: 0.8em;
+  text-transform: capitalize;
+  font-weight: bolder;
+}
+.app__header .nav__connected .title .img2 {
+  width: 8%;
+}
+.app__header .nav__connected .card {
+  position: absolute;
+  background-color: white;
+  width: 60%;
+  left: 23%;
+  height: 0px;
+  pointer-events: none;
+  opacity: 0;
+  transition: all 0.4s;
+}
+.app__header .nav__connected .card p {
+  margin: 10px;
+}
+.app__header .nav__connected .card p a {
+  font-size: 0.9em;
+  color: black;
+  text-decoration: none;
+  text-transform: capitalize;
+  font-weight: bolder;
+}
+.app__header .nav__connected .card p a:hover {
+  text-decoration: underline;
+  transition: all 0.3s;
+}
+.app__header .nav__connected .card p:last-child {
+  background-color: red;
+  border-radius: 26px;
+  width: 50%;
+  padding: 5px;
+  position: relative;
+  left: 20%;
+  color: #fff;
+  opacity: 0;
+}
 .app__header .nav p:nth-child(4) {
   background-color: red;
   border-radius: 26px;
   padding: 5px 15px;
+  width: min-content;
 }
 .app__header .nav p:nth-child(4) a {
   color: inherit;
   text-decoration: none;
 }
 .app__header .nav P:last-child {
+  width: min-content;
   background-color: #ffff;
   color: #000;
   border-radius: 26px;
