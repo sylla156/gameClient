@@ -79,13 +79,13 @@ body::-webkit-scrollbar-thumb {
 .app__home--header .nav p:nth-child(4) {
   background-color: red;
   border-radius: 26px;
-  padding: 5px 10px;
+  padding: 5px 15px;
 }
 .app__home--header .nav P:last-child {
   background-color: #ffff;
   color: #000;
   border-radius: 26px;
-  padding: 5px 10px;
+  padding: 5px 15px;
 }
 .app__home--content {
   height: 90%;
@@ -123,9 +123,12 @@ body::-webkit-scrollbar-thumb {
   border: none;
   outline: none;
   width: 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .app__home--content .form div button img {
-  width: 50%;
+  width: 45%;
   height: auto;
 }
 .app__home--content .form div input {

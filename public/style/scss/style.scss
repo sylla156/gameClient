@@ -82,14 +82,14 @@ body::-webkit-scrollbar-thumb {
         p:nth-child(4) {
           background-color: $app;
           border-radius: 26px;
-          padding: 5px 10px;
+          padding: 5px 15px;
         }
 
         P:last-child {
           background-color: $homeColor;
           color: $homeBackgroundColor;
           border-radius: 26px;
-          padding: 5px 10px;
+          padding: 5px 15px;
         }
       }
     }
@@ -130,8 +130,11 @@ body::-webkit-scrollbar-thumb {
             border: none;
             outline: none;
             width: 5%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             img {
-              width: 50%;
+              width: 45%;
               height: auto;
             }
           }
