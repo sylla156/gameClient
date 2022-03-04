@@ -26,4 +26,17 @@
 <% } %>
 
    
+<% if (page === 'forums') { %>
+    <%- include('./pages/Forums/forums.ejs') %> 
+<% } %>
+
+<% if (page === 'physical') { %>
+    <%- include('./pages/Forums/pages/physical.ejs') %> 
+<% } %>
+
+<% if (page === 'digital') { %>
+    <%- include('./pages/Forums/pages/digital.ejs') %> 
+<% } %>
+
+
 <%- include('./pages/Footer/footer.ejs') %>

@@ -74,6 +74,10 @@ body::-webkit-scrollbar-thumb {
 .app__header .nav > p {
   width: min-content;
 }
+.app__header .nav > p a {
+  color: white;
+  text-decoration: none;
+}
 .app__header .nav__connected {
   width: 40%;
   position: relative;
@@ -535,7 +539,7 @@ body::-webkit-scrollbar-thumb {
 .app__createPlayer--content .form form div input {
   display: block;
   width: 100%;
-  background-color: #E1E1E1;
+  background-color: #e1e1e1;
   border: none;
   outline: none;
   height: 24px;
@@ -543,14 +547,14 @@ body::-webkit-scrollbar-thumb {
   border-radius: 5px;
 }
 .app__createPlayer--content .form form div textarea {
-  background-color: #E1E1E1;
+  background-color: #e1e1e1;
   width: 100%;
   border: none;
   outline: none;
   border-radius: 5px;
 }
 .app__createPlayer--content .form form div select {
-  background-color: #E1E1E1;
+  background-color: #e1e1e1;
   width: 100%;
   border: none;
   outline: none;
@@ -654,7 +658,7 @@ body::-webkit-scrollbar-thumb {
 .app__createTeam--content .form form div input {
   display: block;
   width: 100%;
-  background-color: #E1E1E1;
+  background-color: #e1e1e1;
   border: none;
   outline: none;
   height: 24px;
@@ -662,14 +666,14 @@ body::-webkit-scrollbar-thumb {
   border-radius: 5px;
 }
 .app__createTeam--content .form form div textarea {
-  background-color: #E1E1E1;
+  background-color: #e1e1e1;
   width: 100%;
   border: none;
   outline: none;
   border-radius: 5px;
 }
 .app__createTeam--content .form form div select {
-  background-color: #E1E1E1;
+  background-color: #e1e1e1;
   width: 100%;
   border: none;
   outline: none;
@@ -773,7 +777,7 @@ body::-webkit-scrollbar-thumb {
 .app__createForum--content .form form div input {
   display: block;
   width: 100%;
-  background-color: #E1E1E1;
+  background-color: #e1e1e1;
   border: none;
   outline: none;
   height: 24px;
@@ -781,14 +785,14 @@ body::-webkit-scrollbar-thumb {
   border-radius: 5px;
 }
 .app__createForum--content .form form div textarea {
-  background-color: #E1E1E1;
+  background-color: #e1e1e1;
   width: 100%;
   border: none;
   outline: none;
   border-radius: 5px;
 }
 .app__createForum--content .form form div select {
-  background-color: #E1E1E1;
+  background-color: #e1e1e1;
   width: 100%;
   border: none;
   outline: none;
@@ -810,6 +814,172 @@ body::-webkit-scrollbar-thumb {
   text-transform: capitalize;
   font-weight: bolder;
   margin: 20px;
+}
+.app__forums {
+  background-color: #fff;
+}
+.app__forums--header {
+  height: 35vh;
+  background-image: url(../../img/register.png);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.app__forums--header .title {
+  margin-top: 8%;
+  text-transform: capitalize;
+  font-weight: bolder;
+}
+.app__forums--content {
+  height: 80%;
+}
+.app__forums--content .form {
+  height: 50vh;
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+}
+.app__forums--content .form .title {
+  background-color: red;
+  width: 70%;
+  height: 10%;
+  border-radius: 10px;
+  text-align: center;
+  color: #fff;
+  padding-top: 1%;
+}
+.app__forums--content .form h2 {
+  background-color: #c4c4c4;
+  width: 50%;
+  min-width: max-content;
+  height: 2em;
+  font-size: 1.5em;
+  border-radius: 10px;
+  text-align: center;
+  padding-top: 0.5em;
+}
+.app__forums--content .form h2 a {
+  color: black;
+  text-decoration: none;
+}
+.app__physical {
+  background-color: #fff;
+}
+.app__physical--header {
+  height: 35vh;
+  background-image: url(../../img/register.png);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.app__physical--header .title {
+  margin-top: 8%;
+  text-transform: capitalize;
+  font-weight: bolder;
+}
+.app__physical--content {
+  height: 80%;
+}
+.app__physical--content .form {
+  width: 100%;
+  height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.app__physical--content .form div {
+  width: 80%;
+  height: 70%;
+  background: #c4c4c4;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.app__physical--content .form div p {
+  width: 65%;
+  height: 50%;
+  text-align: center;
+  font-size: 1.5em;
+  font-weight: bolder;
+  padding: 20px 0;
+}
+.app__physical--content .back a {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background-color: red;
+  border-radius: 26px;
+  padding: 5px 15px;
+  color: #ffff;
+  text-transform: capitalize;
+  font-weight: bolder;
+  margin: 20px;
+  text-decoration: none;
+}
+.app__digital {
+  background-color: #fff;
+}
+.app__digital--header {
+  height: 35vh;
+  background-image: url(../../img/register.png);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.app__digital--header .title {
+  margin-top: 8%;
+  text-transform: capitalize;
+  font-weight: bolder;
+}
+.app__digital--content {
+  height: 80%;
+}
+.app__digital--content .form {
+  width: 100%;
+  height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.app__digital--content .form div {
+  width: 80%;
+  height: 70%;
+  background: #c4c4c4;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.app__digital--content .form div p {
+  width: 65%;
+  height: 50%;
+  text-align: center;
+  font-size: 1.5em;
+  font-weight: bolder;
+  padding: 20px 0;
+}
+.app__digital--content .back a {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background-color: red;
+  border-radius: 26px;
+  padding: 5px 15px;
+  color: #ffff;
+  text-transform: capitalize;
+  font-weight: bolder;
+  margin: 20px;
+  text-decoration: none;
 }
 
 /*# sourceMappingURL=style.css.map */

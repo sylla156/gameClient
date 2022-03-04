@@ -76,6 +76,10 @@ body::-webkit-scrollbar-thumb {
       text-transform: uppercase;
       & > p {
         width: min-content;
+        a {
+          color: white;
+          text-decoration: none;
+        }
       }
 
       &__connected {
@@ -501,10 +505,9 @@ body::-webkit-scrollbar-thumb {
   }
 
   &__createPlayer {
-   
     background-color: #fff;
     &--header {
-      height:35vh;
+      height: 35vh;
       background-image: url(../../img/register.png);
       background-size: cover;
       background-position: center;
@@ -542,36 +545,35 @@ body::-webkit-scrollbar-thumb {
               background-position: center;
               background-size: cover;
               position: relative;
-            overflow: hidden;
+              overflow: hidden;
 
               &::before {
-                content: ' ';
+                content: " ";
                 width: 30px;
                 height: 30px;
                 position: absolute;
                 bottom: 15%;
                 left: 50%;
-                transform: translate(-50%,0);
+                transform: translate(-50%, 0);
                 background-image: url(../../img//profile.png);
                 background-size: cover;
                 background-position: center;
-  
               }
               .file {
                 position: absolute;
-                bottom:0;
+                bottom: 0;
                 left: 50%;
-                transform: translate(-50%,0);
+                transform: translate(-50%, 0);
                 width: 100%;
                 height: 60px;
                 color: #ffffff67;
                 background-color: #ffffff67;
-                &::-webkit-file-upload-button{
+                &::-webkit-file-upload-button {
                   visibility: hidden;
                 }
               }
             }
-          } 
+          }
           div {
             margin: 3vh 0;
             label {
@@ -585,26 +587,24 @@ body::-webkit-scrollbar-thumb {
             input {
               display: block;
               width: 100%;
-              background-color: #E1E1E1;
+              background-color: #e1e1e1;
               border: none;
               outline: none;
               height: 24px;
               width: 100%;
               border-radius: 5px;
             }
-            
 
             textarea {
-              background-color: #E1E1E1;
+              background-color: #e1e1e1;
               width: 100%;
               border: none;
               outline: none;
               border-radius: 5px;
-
             }
 
             select {
-              background-color: #E1E1E1;
+              background-color: #e1e1e1;
               width: 100%;
               border: none;
               outline: none;
@@ -615,8 +615,6 @@ body::-webkit-scrollbar-thumb {
             #level {
               margin-bottom: 100px;
             }
-
-            
           }
           button {
             position: absolute;
@@ -630,17 +628,16 @@ body::-webkit-scrollbar-thumb {
             text-transform: capitalize;
             font-weight: bolder;
             margin: 20px;
-            }
+          }
         }
       }
     }
   }
 
   &__createTeam {
-   
     background-color: #fff;
     &--header {
-      height:35vh;
+      height: 35vh;
       background-image: url(../../img/register.png);
       background-size: cover;
       background-position: center;
@@ -678,36 +675,35 @@ body::-webkit-scrollbar-thumb {
               background-position: center;
               background-size: cover;
               position: relative;
-            overflow: hidden;
+              overflow: hidden;
 
               &::before {
-                content: ' ';
+                content: " ";
                 width: 30px;
                 height: 30px;
                 position: absolute;
                 bottom: 15%;
                 left: 50%;
-                transform: translate(-50%,0);
+                transform: translate(-50%, 0);
                 background-image: url(../../img//profile.png);
                 background-size: cover;
                 background-position: center;
-  
               }
               .file {
                 position: absolute;
-                bottom:0;
+                bottom: 0;
                 left: 50%;
-                transform: translate(-50%,0);
+                transform: translate(-50%, 0);
                 width: 100%;
                 height: 60px;
                 color: #ffffff67;
                 background-color: #ffffff67;
-                &::-webkit-file-upload-button{
+                &::-webkit-file-upload-button {
                   visibility: hidden;
                 }
               }
             }
-          } 
+          }
           div {
             margin: 3vh 0;
             label {
@@ -721,26 +717,24 @@ body::-webkit-scrollbar-thumb {
             input {
               display: block;
               width: 100%;
-              background-color: #E1E1E1;
+              background-color: #e1e1e1;
               border: none;
               outline: none;
               height: 24px;
               width: 100%;
               border-radius: 5px;
             }
-            
 
             textarea {
-              background-color: #E1E1E1;
+              background-color: #e1e1e1;
               width: 100%;
               border: none;
               outline: none;
               border-radius: 5px;
-
             }
 
             select {
-              background-color: #E1E1E1;
+              background-color: #e1e1e1;
               width: 100%;
               border: none;
               outline: none;
@@ -751,8 +745,6 @@ body::-webkit-scrollbar-thumb {
             #level {
               margin-bottom: 100px;
             }
-
-            
           }
           button {
             position: absolute;
@@ -766,17 +758,16 @@ body::-webkit-scrollbar-thumb {
             text-transform: capitalize;
             font-weight: bolder;
             margin: 20px;
-            }
+          }
         }
       }
     }
   }
 
   &__createForum {
-   
     background-color: #fff;
     &--header {
-      height:35vh;
+      height: 35vh;
       background-image: url(../../img/register.png);
       background-size: cover;
       background-position: center;
@@ -814,36 +805,35 @@ body::-webkit-scrollbar-thumb {
               background-position: center;
               background-size: cover;
               position: relative;
-            overflow: hidden;
+              overflow: hidden;
 
               &::before {
-                content: ' ';
+                content: " ";
                 width: 30px;
                 height: 30px;
                 position: absolute;
                 bottom: 15%;
                 left: 50%;
-                transform: translate(-50%,0);
+                transform: translate(-50%, 0);
                 background-image: url(../../img//profile.png);
                 background-size: cover;
                 background-position: center;
-  
               }
               .file {
                 position: absolute;
-                bottom:0;
+                bottom: 0;
                 left: 50%;
-                transform: translate(-50%,0);
+                transform: translate(-50%, 0);
                 width: 100%;
                 height: 60px;
                 color: #ffffff67;
                 background-color: #ffffff67;
-                &::-webkit-file-upload-button{
+                &::-webkit-file-upload-button {
                   visibility: hidden;
                 }
               }
             }
-          } 
+          }
           div {
             margin: 3vh 0;
             label {
@@ -857,26 +847,24 @@ body::-webkit-scrollbar-thumb {
             input {
               display: block;
               width: 100%;
-              background-color: #E1E1E1;
+              background-color: #e1e1e1;
               border: none;
               outline: none;
               height: 24px;
               width: 100%;
               border-radius: 5px;
             }
-            
 
             textarea {
-              background-color: #E1E1E1;
+              background-color: #e1e1e1;
               width: 100%;
               border: none;
               outline: none;
               border-radius: 5px;
-
             }
 
             select {
-              background-color: #E1E1E1;
+              background-color: #e1e1e1;
               width: 100%;
               border: none;
               outline: none;
@@ -887,8 +875,6 @@ body::-webkit-scrollbar-thumb {
             #level {
               margin-bottom: 100px;
             }
-
-            
           }
           button {
             position: absolute;
@@ -902,7 +888,195 @@ body::-webkit-scrollbar-thumb {
             text-transform: capitalize;
             font-weight: bolder;
             margin: 20px;
-            }
+          }
+        }
+      }
+    }
+  }
+
+  &__forums {
+    background-color: #fff;
+    &--header {
+      height: 35vh;
+      background-image: url(../../img/register.png);
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .title {
+        margin-top: 8%;
+        text-transform: capitalize;
+        font-weight: bolder;
+      }
+    }
+
+    &--content {
+      height: 80%;
+
+      .form {
+        height: 50vh;
+        width: 80%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: column;
+
+        .title {
+          background-color: $app;
+          width: 70%;
+          height: 10%;
+          border-radius: 10px;
+          text-align: center;
+          color: #fff;
+          padding-top: 1%;
+        }
+
+        h2 {
+          background-color: #c4c4c4;
+          width: 50%;
+          min-width: max-content;
+          height: 2em;
+          font-size: 1.5em;
+          border-radius: 10px;
+          text-align: center;
+          padding-top: 0.5em;
+          a {
+            color: black;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+
+  &__physical {
+    background-color: #fff;
+    &--header {
+      height: 35vh;
+      background-image: url(../../img/register.png);
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .title {
+        margin-top: 8%;
+        text-transform: capitalize;
+        font-weight: bolder;
+      }
+    }
+
+    &--content {
+      height: 80%;
+
+      .form {
+        width: 100%;
+        height: 60vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        div {
+          width: 80%;
+          height: 70%;
+          background: #c4c4c4;
+          border-radius: 10px;
+
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          p {
+            width: 65%;
+            height: 50%;
+            text-align: center;
+            font-size: 1.5em;
+            font-weight: bolder;
+            padding: 20px 0;
+          }
+        }
+      }
+      .back {
+        a {
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          background-color: $app;
+          border-radius: 26px;
+          padding: 5px 15px;
+          color: $homeColor;
+          text-transform: capitalize;
+          font-weight: bolder;
+          margin: 20px;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+
+  &__digital {
+    background-color: #fff;
+    &--header {
+      height: 35vh;
+      background-image: url(../../img/register.png);
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .title {
+        margin-top: 8%;
+        text-transform: capitalize;
+        font-weight: bolder;
+      }
+    }
+
+    &--content {
+      height: 80%;
+
+      .form {
+        width: 100%;
+        height: 60vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        div {
+          width: 80%;
+          height: 70%;
+          background: #c4c4c4;
+          border-radius: 10px;
+
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          p {
+            width: 65%;
+            height: 50%;
+            text-align: center;
+            font-size: 1.5em;
+            font-weight: bolder;
+            padding: 20px 0;
+          }
+        }
+      }
+      .back {
+        a {
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          background-color: $app;
+          border-radius: 26px;
+          padding: 5px 15px;
+          color: $homeColor;
+          text-transform: capitalize;
+          font-weight: bolder;
+          margin: 20px;
+          text-decoration: none;
         }
       }
     }

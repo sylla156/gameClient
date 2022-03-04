@@ -33,6 +33,20 @@ app.get('/CreateForum', (request, response) => {
   response.render('index', {page: 'createForum'})
 })
 
+app.get('/forums', (request, response) => {
+  response.render('index', {page: 'forums'})
+})
+
+
+app.get('/physical', (request, response) => {
+  response.render('index', {page: 'physical'})
+})
+
+
+app.get('/digital', (request, response) => {
+  response.render('index', {page: 'digital'})
+})
+
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
 })
