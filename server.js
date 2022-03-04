@@ -20,6 +20,11 @@ app.get('/login', (request, response) => {
   response.render('index', {page: 'login'})
 })
 
+
+app.get('/CreatePlayer', (request, response) => {
+  response.render('index', {page: 'createPlayer'})
+})
+
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
 })

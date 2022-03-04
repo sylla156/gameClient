@@ -49,6 +49,7 @@ body::-webkit-scrollbar-thumb {
   align-items: center;
   position: fixed;
   top: 0;
+  z-index: 100;
 }
 .app__header .title {
   width: 25%;
@@ -452,6 +453,125 @@ body::-webkit-scrollbar-thumb {
   color: #ffff;
   text-transform: capitalize;
   font-weight: bolder;
+}
+.app__createPlayer {
+  background-color: #fff;
+}
+.app__createPlayer--header {
+  height: 35vh;
+  background-image: url(../../img/register.png);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.app__createPlayer--header .title {
+  margin-top: 8%;
+  text-transform: capitalize;
+  font-weight: bolder;
+}
+.app__createPlayer--content {
+  height: 80%;
+}
+.app__createPlayer--content .form {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.app__createPlayer--content .form form {
+  height: 100%;
+  width: 30vw;
+}
+.app__createPlayer--content .form form .logo .wrapper {
+  width: 140px;
+  height: 140px;
+  margin: auto;
+  border-radius: 50%;
+  background-image: url(../../img/create.png);
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  overflow: hidden;
+}
+.app__createPlayer--content .form form .logo .wrapper::before {
+  content: " ";
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  bottom: 15%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  background-image: url(../../img//profile.png);
+  background-size: cover;
+  background-position: center;
+}
+.app__createPlayer--content .form form .logo .wrapper .file {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+  width: 100%;
+  height: 60px;
+  color: #ffffff67;
+  background-color: #ffffff67;
+}
+.app__createPlayer--content .form form .logo .wrapper .file::-webkit-file-upload-button {
+  visibility: hidden;
+}
+.app__createPlayer--content .form form div {
+  margin: 3vh 0;
+}
+.app__createPlayer--content .form form div label {
+  display: block;
+  text-align: center;
+  font-size: 1.4em;
+  font-weight: bolder;
+  margin-bottom: 20px;
+  text-transform: capitalize;
+}
+.app__createPlayer--content .form form div input {
+  display: block;
+  width: 100%;
+  background-color: #E1E1E1;
+  border: none;
+  outline: none;
+  height: 24px;
+  width: 100%;
+  border-radius: 5px;
+}
+.app__createPlayer--content .form form div textarea {
+  background-color: #E1E1E1;
+  width: 100%;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+}
+.app__createPlayer--content .form form div select {
+  background-color: #E1E1E1;
+  width: 100%;
+  border: none;
+  outline: none;
+  height: 24px;
+  border-radius: 5px;
+}
+.app__createPlayer--content .form form div #level {
+  margin-bottom: 100px;
+}
+.app__createPlayer--content .form form button {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  background-color: red;
+  border-radius: 26px;
+  padding: 5px 15px;
+  border: none;
+  color: #ffff;
+  text-transform: capitalize;
+  font-weight: bolder;
+  margin: 20px;
 }
 
 /*# sourceMappingURL=style.css.map */
