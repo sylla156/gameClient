@@ -25,6 +25,10 @@ app.get('/CreatePlayer', (request, response) => {
   response.render('index', {page: 'createPlayer'})
 })
 
+app.get('/CreateTeam', (request, response) => {
+  response.render('index', {page: 'createTeam'})
+})
+
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
 })
