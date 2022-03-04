@@ -47,6 +47,14 @@ app.get('/digital', (request, response) => {
   response.render('index', {page: 'digital'})
 })
 
+app.get('/teams', (request, response) => {
+  response.render('index', {page: 'teams'})
+})
+
+app.get('/players', (request, response) => {
+  response.render('index', {page: 'players'})
+})
+
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
 })

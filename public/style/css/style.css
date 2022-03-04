@@ -981,5 +981,13 @@ body::-webkit-scrollbar-thumb {
   margin: 20px;
   text-decoration: none;
 }
+.app__teams {
+  background-color: #f5f5f5;
+  color: black;
+}
+.app__players {
+  background-color: #c4c4c4;
+  color: black;
+}
 
 /*# sourceMappingURL=style.css.map */

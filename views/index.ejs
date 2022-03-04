@@ -38,5 +38,12 @@
     <%- include('./pages/Forums/pages/digital.ejs') %> 
 <% } %>
 
+<% if (page === 'teams') { %>
+    <%- include('./pages/Teams/teams.ejs') %> 
+<% } %>
+
+<% if (page === 'players') { %>
+    <%- include('./pages/Players/players.ejs') %> 
+<% } %>
 
 <%- include('./pages/Footer/footer.ejs') %>
