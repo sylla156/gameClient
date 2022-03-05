@@ -1123,6 +1123,7 @@ body::-webkit-scrollbar-thumb {
   font-weight: bold;
   text-transform: capitalize;
   background-color: white;
+  border-radius: 0 0 10px 10px;
 }
 .app__players--content .content .player .card a .header {
   height: 25%;
@@ -1137,6 +1138,69 @@ body::-webkit-scrollbar-thumb {
   justify-content: space-around;
   align-items: center;
   flex-direction: column;
+  border-radius: 0 0 10px 10px;
+}
+.app__player {
+  color: black;
+  background-color: #fff;
+  height: 100vh;
+  padding-top: 8vh;
+}
+.app__player--title {
+  height: 20%;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  padding: 0 0 0 8%;
+}
+.app__player--title h1 {
+  text-transform: capitalize;
+  font-size: 3em;
+}
+.app__player--title h3 {
+  text-transform: capitalize;
+  color: red;
+  font-size: 1.5em;
+}
+.app__player--content {
+  height: 70%;
+  padding-left: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.app__player--content .image {
+  width: 30%;
+  height: 100%;
+}
+.app__player--content .text {
+  width: 70%;
+  height: max-content;
+  align-self: end;
+  margin-bottom: 10%;
+}
+.app__player--content .text h3 {
+  text-transform: capitalize;
+  margin: 10px;
+  font-size: 1.8em;
+}
+.app__player--content .text p {
+  font-weight: bolder;
+  margin: 10px;
+}
+.app__player--btn {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+.app__player--btn p {
+  padding: 10px 40px;
+  margin: 0 20px;
+  background-color: red;
+  border-radius: 10px;
+  color: white;
+  text-transform: capitalize;
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=style.css.map */
