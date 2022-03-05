@@ -7,41 +7,54 @@
             <form action="" method="post">
                 <div>
                     <label for="firstName">first name</label>
-                    <input type="text" id="firstName" name="firstName" />
+                    <input type="text" id="firstName" name="firstName" required minlength="3"/>
                 </div>
     
                 <div>
                     <label for="lastName">last name</label>
-                    <input type="text" id="lastName" name="lastName"/>
+                    <input type="text" id="lastName" name="lastName" required minlength="3"/>
                 </div>
     
                 <div>
-                    <label for="Username">last name</label>
-                    <input type="text" id="Username" name="Username"/>
+                    <label for="username">username</label>
+                    <input type="text" id="username" name="username" required minlength="3"/>
                 </div>
 
                 <div>
                     <label for="email">email</label>
-                    <input type="email" id="email" name="email"/>
+                    <input type="email" id="email" name="email" required/>
                 </div>
 
                 <div>
                     <label for="birthdate">Birthdate</label>
-                    <input type="date" name="birthdate" id="birthdate">
+                    <input type="date" name="birthdate" id="birthdate" required>
                 </div>
                
                 <div>
                     <label for="password">password</label>
-                    <input type="password" name="password" id="password">
+                    <input type="password" name="password" id="password" required minlength="8">
                 </div>
 
                 <div>
                     <label for="confirmPassword">confirm password</label>
-                    <input type="password" name="confirmPassword" id="confirmPassword">
+                    <input type="password" name="confirmPassword" id="confirmPassword" required minlength="8">
                 </div>
 
                 <button type="submit">register</button>
             </form>
         </div
     </div>
+
+     
+        <% if (locals.email || locals.password ==false) { %>
+            
+            <div class="app__register--alert">
+                <% if (email == false) { %>
+                    <p>check your mail </p>
+                    <% } %>
+                    <% if (password == false) { %>
+                        <p>check your passwork</p>             
+                <% } %>
+            </div>
+        <% } %>
 </div>

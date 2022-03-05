@@ -345,6 +345,7 @@ body::-webkit-scrollbar-thumb {
 .app__register {
   height: 100vh;
   background-color: #fff;
+  position: relative;
 }
 .app__register--header {
   height: 35%;
@@ -401,9 +402,29 @@ body::-webkit-scrollbar-thumb {
   text-transform: capitalize;
   font-weight: bolder;
 }
+.app__register--alert {
+  position: absolute;
+  right: 25%;
+  top: 35%;
+  background-color: #ca0909b4;
+  border: 2px solid red;
+  color: white;
+  width: 50vw;
+  height: max-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.app__register--alert p {
+  margin: 5px 20px;
+  color: white;
+  text-transform: uppercase;
+  font-weight: bolder;
+}
 .app__login {
   height: 100vh;
   background-color: #fff;
+  position: relative;
 }
 .app__login--header {
   height: 35%;
@@ -456,6 +477,25 @@ body::-webkit-scrollbar-thumb {
   border: none;
   color: #ffff;
   text-transform: capitalize;
+  font-weight: bolder;
+}
+.app__login--alert {
+  position: absolute;
+  right: 25%;
+  top: 35%;
+  background-color: #84cc17b1;
+  border: 2px solid green;
+  color: black;
+  width: 50vw;
+  height: max-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.app__login--alert p {
+  margin: 5px 20px;
+  color: white;
+  text-transform: uppercase;
   font-weight: bolder;
 }
 .app__createPlayer {

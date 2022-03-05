@@ -377,6 +377,7 @@ body::-webkit-scrollbar-thumb {
   &__register {
     height: 100vh;
     background-color: #fff;
+    position: relative;
     &--header {
       height: 35%;
       background-image: url(../../img/register.png);
@@ -438,11 +439,32 @@ body::-webkit-scrollbar-thumb {
         }
       }
     }
+
+    &--alert {
+      position: absolute;
+      right: 25%;
+      top: 35%;
+      background-color: #ca0909b4;
+      border: 2px solid red;
+      color: white;
+      width: 50vw;
+      height: max-content;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      p {
+        margin: 5px 20px;
+        color: white;
+        text-transform: uppercase;
+        font-weight: bolder;
+      }
+    }
   }
 
   &__login {
     height: 100vh;
     background-color: #fff;
+    position: relative;
     &--header {
       height: 35%;
       background-image: url(../../img/register.png);
@@ -501,6 +523,26 @@ body::-webkit-scrollbar-thumb {
             }
           }
         }
+      }
+    }
+
+    &--alert {
+      position: absolute;
+      right: 25%;
+      top: 35%;
+      background-color: #84cc17b1;
+      border: 2px solid green;
+      color: black;
+      width: 50vw;
+      height: max-content;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      p {
+        margin: 5px 20px;
+        color: white;
+        text-transform: uppercase;
+        font-weight: bolder;
       }
     }
   }

@@ -20,4 +20,13 @@
             </form>
         </div
     </div>
+
+    <% if (locals.register) { %>
+            
+        <div class="app__login--alert">
+            <% if (register == true) { %>
+                <p>your is create connect now</p>
+                <% } %>
+        </div>
+    <% } %>
 </div>
