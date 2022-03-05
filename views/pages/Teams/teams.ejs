@@ -1,3 +1,66 @@
 <div class="app__teams">
-    <h1>hello world</h1>
-</div>
+    <div class="app__teams--header">
+      <h1 class="title">FIND THE TEAM</h1>
+    </div>
+    <div class="app__teams--content">
+      <div class="pagination">
+        <p class="reverse"><img src="img/pagination.png" /></p>
+        <p>1</p>
+        <p>2</p>
+        <p>3</p>
+        <p>4</p>
+        <p>5</p>
+        <p ><img src="img/pagination.png" /></p>
+      </div>
+      <div class="content">
+          <div class="form">
+              <h4>Specific search</h4>
+              <form action="" method="get">
+                  <div class="search">
+                      <div>
+                          <button type="submit">
+                            <img src="img/search.png"/>
+                          </button>
+                          <input
+                            type="text"
+                            name="search"
+                          />
+                        </div>
+                  </div>
+  
+                  <div class="selected">
+                      <select name="game">
+                          <option value="physical" selected>Physical</option>
+                          <option value="digital">Digital</option>
+                      </select>
+                  </div>
+  
+                  <div class="selected">
+                      <select name="platforme" >
+                          <option value="Pc">PC</option>
+                          <option value="Playstation">Playstation</option>
+                      </select>
+                  </div>
+              </form>
+          </div>
+          <div class="player">
+  
+              <div class="card">
+                  <a href=<%= `/team?id=12` %> >
+                         <div class="header">
+  
+                         </div>
+                         <div class="content">
+                             <p>firstName</p>
+                             <p>lastname</p>
+                             <p>game</p>
+                             <p>skilled</p>
+                         </div>
+                  </a>
+              </div>
+              
+          </div>
+      </div>
+    </div>
+  </div>
+  
