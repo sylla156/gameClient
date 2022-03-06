@@ -6,7 +6,16 @@ const bodyParser = require("body-parser");
 const app = express();
 const port = 3000;
 const cookieParser = require('cookie-parser');
-
+const multer = require('multer');
+const storage = multer.diskStorage({
+  destination: (req,file,cb) => {
+    cb(null,__dirname + '/uploads/images');
+  },
+  filename: (req,file,cb) => {
+    cb(null,(Date.now()+ file.originalname));
+  }
+})
+const upload = multer({storage: storage});
 
 app.use(cookieParser())
 
@@ -130,8 +139,9 @@ app.get("/CreateForum", (request, response) => {
 });
 
 
-app.post('/CreatePlayer', (request, response) => {
-  response.send('ll')
+app.post('/CreatePlayer',  upload.single('image') ,(request, response) => {
+  response.send(request.body)
+
 })
 
 
