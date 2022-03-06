@@ -2,34 +2,39 @@
     <div class="app__createPlayer--header">
         <h1 class="title">Create your Player card</h1>
     </div>
+    <% if (locals.add) { %>
+     <div class="app__createPlayer--add">
+         <p>creation of a player account</p>
+     </div> 
+    <% } %>
     <div class="app__createPlayer--content">
         <div class="form">
             <form action="/CreatePlayer" method="post" enctype="multipart/form-data">
                 <div class="logo">
                     <label for="image">Upload your profile photo</label>
                     <div class="wrapper">
-                        <input type="file" id="image" name="image" class="file" accept="image/*" />
+                        <input type="file" id="image" name="image" class="file" accept="image/*" required/>
                     </div>
                 </div>
     
                 <div>
                     <label for="name">Name of the game</label>
-                    <input type="text" id="name" name="name"/>
+                    <input type="text" id="name" name="playername" required/>
                 </div>
     
                 <div>
                     <label for="about">About</label>
-                    <textarea name="about" id="about" cols="30" rows="10"></textarea>
+                    <textarea name="about" id="about" cols="30" rows="10" required></textarea>
                 </div>
 
                 <div>
-                    <label for="descTeam">Describe yourself</label>
-                    <textarea name="descTeam" id="descTeam" cols="30" rows="5"></textarea>
+                    <label for="desc">Describe yourself</label>
+                    <textarea name="desc" id="desc" cols="30" rows="5" required></textarea>
                 </div>
                
                 <div>
                     <label for="game">Type of the game</label>
-                    <select name="game" id="game" >
+                    <select name="game" id="game" required>
                         <option value="phyisical">Phyisical</option>
                         <option value="digital">Digital</option>
                     </select>
@@ -38,7 +43,7 @@
                 
                 <div>
                     <label for="level">Skill level</label>
-                    <select name="level" id="level">
+                    <select name="level" id="level" required>
                         <option value="beginner">Beginner</option>
                         <option value="intermediate">intermediate</option>
                         <option value="skilled">Skilled</option>

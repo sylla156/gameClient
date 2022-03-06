@@ -2,11 +2,13 @@ const express = require("express");
 let ejs = require("ejs");
 const createPlayer = require("./models/createPlayer");
 const playerConnect = require("./models/playerConnect");
+const createPlayers = require('./models/create/CreatePlayer');
 const bodyParser = require("body-parser");
 const app = express();
 const port = 3000;
 const cookieParser = require('cookie-parser');
 const multer = require('multer');
+const { redirect } = require("express/lib/response");
 const storage = multer.diskStorage({
   destination: (req,file,cb) => {
     cb(null,__dirname + '/uploads/images');
@@ -29,13 +31,15 @@ app.get("/", (request, response) => {
   if (request.cookies.connected === undefined) {
     response.cookie('connected',{
       connected: false,
-      name: null
+      name: null,
+      userId:null
     },{ maxAge: 900000, httpOnly: true })
     response.redirect('/')
   }
   const connected = request.cookies.connected.connected;
   const name = request.cookies.connected.name;
-  response.render("index", { page: "home", connected: connected ,name: name});
+  const userId = request.cookies.connected.userId;
+  response.render("index", { page: "home", connected: connected ,name: name, userId: userId});
 });
 
 app.get("/register", (request, response) => {
@@ -96,6 +100,7 @@ app.post("/login", (request, response) => {
       response.cookie('connected',{
         connected: true,
         name: results[0].username,
+        userId: results[0].id
       },{ maxAge: 900000, httpOnly: true })
       response.redirect('/')
     }
@@ -106,33 +111,34 @@ app.post("/login", (request, response) => {
 app.get('/logout', (request, response) => {
   response.cookie('connected',{
     connected:false,
-    name: null
+    name: null,
+    userId: null,
   },{ maxAge: 900000, httpOnly: true });
   response.redirect('/');
 })
 
 app.get("/CreatePlayer", (request, response) => {
-  const {connected , name } = request.cookies.connected;
+  const {connected , name,userId } = request.cookies.connected;
 if(connected) {
- response.render("index", { page: "createPlayer",connected: connected, name: name });
+ response.render("index", { page: "createPlayer",connected: connected, name: name ,userId:userId});
 } else {
   response.send('erreur de la page')
 }
 });
 
 app.get("/CreateTeam", (request, response) => {
-  const {connected , name } = request.cookies.connected;
+  const {connected , name ,userId} = request.cookies.connected;
   if(connected) {
-   response.render("index", { page: "createTeam", connected: connected, name:name });
+   response.render("index", { page: "createTeam", connected: connected, name:name ,userId:userId});
   } else {
     response.send('erreur de la page')
   }
 });
 
 app.get("/CreateForum", (request, response) => {
-  const {connected , name } = request.cookies.connected;
+  const {connected , name, userId} = request.cookies.connected;
   if(connected) {
-   response.render("index", { page: "createForum", connected: connected, name:name });
+   response.render("index", { page: "createForum", connected: connected, name:name,userId:userId });
   } else {
     response.send('erreur de la page')
   }
@@ -140,8 +146,11 @@ app.get("/CreateForum", (request, response) => {
 
 
 app.post('/CreatePlayer',  upload.single('image') ,(request, response) => {
-  response.send(request.body)
-
+  const {playername, about, desc, game, level} = request.body;
+  const fileName = request.file.filename;
+  const {connected , name, userId} = request.cookies.connected;
+  const message = createPlayers.create(fileName,playername,about,desc,game,level,userId);
+  response.render("index", { page: "createPlayer", connected: connected, name:name ,userId:userId ,add: message});
 })
 
 
