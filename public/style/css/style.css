@@ -498,6 +498,25 @@ body::-webkit-scrollbar-thumb {
   text-transform: uppercase;
   font-weight: bolder;
 }
+.app__login--error {
+  position: absolute;
+  right: 25%;
+  top: 35%;
+  background-color: #ca0909b4;
+  border: 2px solid red;
+  color: white;
+  width: 50vw;
+  height: max-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.app__login--error p {
+  margin: 5px 20px;
+  color: white;
+  text-transform: uppercase;
+  font-weight: bolder;
+}
 .app__createPlayer {
   background-color: #fff;
 }

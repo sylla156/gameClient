@@ -29,4 +29,15 @@
                 <% } %>
         </div>
     <% } %>
+
+
+    <% if (locals.error) { %>
+            
+        <div class="app__login--error">
+            <% if (error == true) { %>
+                <p>error your password or your email</p>
+                <% } %>
+        </div>
+    <% } %>
+     
 </div>
