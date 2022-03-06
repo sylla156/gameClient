@@ -2,19 +2,24 @@
     <div class="app__createTeam--header">
         <h1 class="title">Create your Team card</h1>
     </div>
+    <% if (locals.add) { %>
+        <div class="app__createPlayer--add">
+            <p>creation of a team account</p>
+        </div> 
+       <% } %>
     <div class="app__createTeam--content">
         <div class="form">
-            <form action="" method="post">
+            <form action="/CreateTeam" method="post" enctype="multipart/form-data">
                 <div class="logo">
                     <label for="image">Upload Team logo</label>
                     <div class="wrapper">
-                        <input type="file" id="image" name="image" class="file"/>
+                        <input type="file" id="image" name="image" class="file" accept="image/*"/>
                     </div>
                 </div>
     
                 <div>
                     <label for="name">Name of the game</label>
-                    <input type="text" id="name" name="name"/>
+                    <input type="text" id="name" name="playername" />
                 </div>
     
                 <div>
@@ -23,8 +28,8 @@
                 </div>
 
                 <div>
-                    <label for="descTeam">Describe your team</label>
-                    <textarea name="descTeam" id="descTeam" cols="30" rows="5"></textarea>
+                    <label for="desc">Describe your team</label>
+                    <textarea name="desc" id="desc" cols="30" rows="5"></textarea>
                 </div>
                
                 <div>

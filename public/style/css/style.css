@@ -671,6 +671,24 @@ body::-webkit-scrollbar-thumb {
   text-transform: capitalize;
   font-weight: bolder;
 }
+.app__createTeam--add {
+  width: 100%;
+  height: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.app__createTeam--add p {
+  padding: 10px;
+  width: 50%;
+  height: 100%;
+  background-color: #84cc17b1;
+  border: 2px solid green;
+  color: black;
+  text-align: center;
+  font-weight: bolder;
+  font-size: 1.2em;
+}
 .app__createTeam--content {
   height: 80%;
 }

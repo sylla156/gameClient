@@ -3,21 +3,33 @@ let ejs = require("ejs");
 const createPlayer = require("./models/createPlayer");
 const playerConnect = require("./models/playerConnect");
 const createPlayers = require('./models/create/CreatePlayer');
+const createTeam = require('./models/create/CreateTeam');
+
 const bodyParser = require("body-parser");
 const app = express();
 const port = 3000;
 const cookieParser = require('cookie-parser');
 const multer = require('multer');
 const { redirect } = require("express/lib/response");
-const storage = multer.diskStorage({
+const storagePlayer = multer.diskStorage({
   destination: (req,file,cb) => {
-    cb(null,__dirname + '/uploads/images');
+    cb(null,__dirname + '/uploads/players');
   },
   filename: (req,file,cb) => {
     cb(null,(Date.now()+ file.originalname));
   }
 })
-const upload = multer({storage: storage});
+const storageTeam = multer.diskStorage({
+  destination: (req,file,cb) => {
+    cb(null,__dirname + '/uploads/teams');
+  },
+  filename: (req,file,cb) => {
+    cb(null,(Date.now()+ file.originalname));
+  }
+})
+const uploadPlayer = multer({storage: storagePlayer});
+const uploadTeam = multer({storage: storageTeam});
+
 
 app.use(cookieParser())
 
@@ -145,12 +157,20 @@ app.get("/CreateForum", (request, response) => {
 });
 
 
-app.post('/CreatePlayer',  upload.single('image') ,(request, response) => {
+app.post('/CreatePlayer',  uploadPlayer.single('image') ,(request, response) => {
   const {playername, about, desc, game, level} = request.body;
   const fileName = request.file.filename;
   const {connected , name, userId} = request.cookies.connected;
   const message = createPlayers.create(fileName,playername,about,desc,game,level,userId);
   response.render("index", { page: "createPlayer", connected: connected, name:name ,userId:userId ,add: message});
+})
+
+app.post('/CreateTeam',  uploadTeam.single('image') ,(request, response) => {
+  const {playername, about, desc, game, level} = request.body;
+  const fileName = request.file.filename;
+  const {connected , name, userId} = request.cookies.connected;
+  const message = createTeam.create(fileName,playername,about,desc,game,level,userId);
+  response.render("index", { page: "createTeam", connected: connected, name:name ,userId:userId ,add: message});
 })
 
 
