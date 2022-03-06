@@ -17,6 +17,13 @@ app.set("view engine", "ejs");
 app.use(express.static(__dirname + "/public"));
 
 app.get("/", (request, response) => {
+  if (request.cookies.connected === undefined) {
+    response.cookie('connected',{
+      connected: false,
+      name: null
+    },{ maxAge: 900000, httpOnly: true })
+    response.redirect('/')
+  }
   const connected = request.cookies.connected.connected;
   const name = request.cookies.connected.name;
   response.render("index", { page: "home", connected: connected ,name: name});
@@ -96,16 +103,37 @@ app.get('/logout', (request, response) => {
 })
 
 app.get("/CreatePlayer", (request, response) => {
-  response.render("index", { page: "createPlayer" });
+  const {connected , name } = request.cookies.connected;
+if(connected) {
+ response.render("index", { page: "createPlayer",connected: connected, name: name });
+} else {
+  response.send('erreur de la page')
+}
 });
 
 app.get("/CreateTeam", (request, response) => {
-  response.render("index", { page: "createTeam" });
+  const {connected , name } = request.cookies.connected;
+  if(connected) {
+   response.render("index", { page: "createTeam", connected: connected, name:name });
+  } else {
+    response.send('erreur de la page')
+  }
 });
 
 app.get("/CreateForum", (request, response) => {
-  response.render("index", { page: "createForum" });
+  const {connected , name } = request.cookies.connected;
+  if(connected) {
+   response.render("index", { page: "createForum", connected: connected, name:name });
+  } else {
+    response.send('erreur de la page')
+  }
 });
+
+
+app.post('/CreatePlayer', (request, response) => {
+  response.send('ll')
+})
+
 
 app.get("/forums", (request, response) => {
   response.render("index", { page: "forums" });
