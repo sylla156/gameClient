@@ -30,11 +30,11 @@
         <p><a href="/teams">TEAMS</a></p>
         <p><a href="/forums">FORUMS</a></p>
         
-        <% if (locals.connected == 'true') { %>
+        <% if (locals.connected === true) { %>
           <div class="nav__connected">
             <div class="title">
               <img src="img/message.png" class="img1"/> 
-              <p>Welcome Hossam</p>
+              <p><%= name %> </p>
               <img src="img/card.png" class="img2">
             </div>
             <div class="card">
@@ -46,7 +46,7 @@
           </div>
         <% } %> 
 
-        <% if (locals.connected == 'false') { %>  
+        <% if (locals.connected === false) { %>  
           <p><a href="/register">REGISTER</a></p>
           <p><a href="/login">LOGIN</a></p>
         <% } %>

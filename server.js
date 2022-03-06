@@ -17,15 +17,17 @@ app.set("view engine", "ejs");
 app.use(express.static(__dirname + "/public"));
 
 app.get("/", (request, response) => {
-  response.render("index", { page: "home", connected: request.cookies.connected });
+  const connected = request.cookies.connected.connected;
+  const name = request.cookies.connected.name;
+  response.render("index", { page: "home", connected: connected ,name: name});
 });
 
 app.get("/register", (request, response) => {
-  const connected = JSON.parse(request.cookies.connected);
+  const connected = request.cookies.connected.connected;
   if(connected === true) {
     response.send('error')
   } else {
-    response.render('index', {page: 'register'})
+    response.render('index', {page: 'register',connected: connected})
   }
 });
 
@@ -48,7 +50,7 @@ app.post("/register", (request, response) => {
     confirmPassword
   );
   if (message === true) {
-    response.render("index", { page: "login", register: true });
+    response.redirect('/login')
   } else if (typeof message === "object") {
     response.render("index", {
       page: "register",
@@ -59,11 +61,11 @@ app.post("/register", (request, response) => {
 });
 
 app.get("/login", (request, response) => {
-  const connected = JSON.parse(request.cookies.connected);
+  const connected = request.cookies.connected.connected;
   if(connected === true) {
     response.send('error')
   } else {
-    response.render('index', {page: 'login'})
+    response.render('index', {page: 'login', connected:connected})
   }
 });
 
@@ -75,7 +77,10 @@ app.post("/login", (request, response) => {
     if (results.length === 0 ) {
       response.render("index", { page: "login", error: true});
     }else{
-      response.cookie('connected',true,{ maxAge: 900000, httpOnly: true })
+      response.cookie('connected',{
+        connected: true,
+        name: results[0].username,
+      },{ maxAge: 900000, httpOnly: true })
       response.redirect('/')
     }
   });
@@ -83,7 +88,10 @@ app.post("/login", (request, response) => {
 });
 
 app.get('/logout', (request, response) => {
-  response.cookie('connected',false,{ maxAge: 900000, httpOnly: true });
+  response.cookie('connected',{
+    connected:false,
+    name: null
+  },{ maxAge: 900000, httpOnly: true });
   response.redirect('/');
 })
 
