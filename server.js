@@ -4,6 +4,8 @@ const createPlayer = require("./models/createPlayer");
 const playerConnect = require("./models/playerConnect");
 const createPlayers = require('./models/create/CreatePlayer');
 const createTeam = require('./models/create/CreateTeam');
+const createForum= require('./models/create/CreateForum');
+
 
 const bodyParser = require("body-parser");
 const app = express();
@@ -171,6 +173,13 @@ app.post('/CreateTeam',  uploadTeam.single('image') ,(request, response) => {
   const {connected , name, userId} = request.cookies.connected;
   const message = createTeam.create(fileName,playername,about,desc,game,level,userId);
   response.render("index", { page: "createTeam", connected: connected, name:name ,userId:userId ,add: message});
+})
+
+app.post('/CreateForum',(request, response) => {
+  const {topic, desc, topicType} = request.body;
+  const {connected , name, userId} = request.cookies.connected;
+  const message = createForum.create(topic, desc, topicType, userId);
+  response.render("index", { page: "createForum", connected: connected, name:name ,userId:userId ,add: message});
 })
 
 

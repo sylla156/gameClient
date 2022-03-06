@@ -2,13 +2,18 @@
     <div class="app__createForum--header">
         <h1 class="title">Create your forum</h1>
     </div>
+    <% if (locals.add) { %>
+        <div class="app__createPlayer--add">
+            <p>creation of a forum</p>
+        </div> 
+       <% } %>
     <div class="app__createForum--content">
         <div class="form">
             <form action="" method="post">
     
                 <div>
                     <label for="name">Topic</label>
-                    <input type="text" id="name" name="name"/>
+                    <input type="text" id="name" name="topic"/>
                 </div>
     
                 <div>
@@ -19,7 +24,7 @@
                
                 <div>
                     <label for="topic">Type of the topic</label>
-                    <select name="topic" id="topic" >
+                    <select name="topicType" id="topic" >
                         <option value="phyisical">Phyisical</option>
                         <option value="digital">Digital</option>
                     </select>
